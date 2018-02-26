@@ -1,0 +1,9 @@
+[package]
+name = "buddha_brot"
+version = "0.1.0"
+authors = ["Andreas Grois <andi@grois.info>"]
+
+[dependencies]
+rand="0.4"
+png="0.11.0"
+num-complex = "0.1"
