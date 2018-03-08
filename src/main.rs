@@ -178,7 +178,7 @@ fn main() {
 
     let threads = 16;
     
-    let mut generation_time = 30;
+    let mut generation_time : i64 = 30;
     
     println!("Starting Threads");
     
@@ -200,7 +200,7 @@ fn main() {
     println!("Letting workers work");
     while generation_time > 0{
         println!("Remaining time: {}",generation_time);
-        thread::sleep(time::Duration::from_secs(cmp::min(5,generation_time)));
+        thread::sleep(time::Duration::from_secs(cmp::max(0,cmp::min(5,generation_time)) as u64));
         generation_time -= 5;
     }
     
