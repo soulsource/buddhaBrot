@@ -134,7 +134,7 @@ fn buddhabrot(x : usize, y : usize, path_length : usize, bailout : f64, returner
     }
     
     let x_range = Range::new(-2.5,1.0);
-    let y_range = Range::new(-1.0,1.0);
+    let y_range = Range::new(-1.55,1.55); //set to 1.55 instead of 1 (which is the image crop range), because lower values than 1.55 cause a visible brightness border on the background for iteration 2
     let mut rng = rand::thread_rng();
     
     //println!("Worker initialized, starting calculation");
